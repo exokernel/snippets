@@ -1,0 +1,14 @@
+#+title: Cli
+
+* Mac OS Netstat with PID
+
+#+begin_src bash
+lsof -Pnl +M -i4 | grep 4000
+
+lsof -nP -iTCP -sTCP:LISTEN | grep <port-number>
+#+end_src
+#+begin_src c
+int main(void) {
+  return 0;
+}
+#+end_src

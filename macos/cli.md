@@ -1,6 +1,6 @@
 # Handy CLI Commands
 
-## Mac OS Netstat with PID
+## Netstat with PID
 
 ```bash
 lsof -Pnl +M -i4 | grep 4000

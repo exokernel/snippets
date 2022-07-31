@@ -1,4 +1,4 @@
-# Cli
+# Handy CLI Commands
 
 ## Mac OS Netstat with PID
 

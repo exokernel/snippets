@@ -1,4 +1,4 @@
-#+title: Cli
+#+title: Handy CLI Commands
 
 * Mac OS Netstat with PID
 
@@ -7,4 +7,3 @@ lsof -Pnl +M -i4 | grep 4000
 
 lsof -nP -iTCP -sTCP:LISTEN | grep <port-number>
 #+end_src
-

@@ -1,0 +1,9 @@
+#+title: Emacs Tricks
+
+* Emacs stuff here
+
+ #+begin_src emacs-lisp
+
+    (stuff arg1 arg2)
+
+ #+end_src

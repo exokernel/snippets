@@ -5,3 +5,15 @@
 #+begin_src sql
     SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$db'
 #+end_src
+
+* Check for user
+#+begin_src sql
+    SELECT USER FROM mysql.user WHERE USER = '$username';
+#+end_src
+
+* Tablespaces
+What is a tablespace?
+
+"A data file that can hold data for one or more InnoDB tables and associated indexes."
+
+https://stackoverflow.com/questions/37805316/what-is-a-tablespace-and-why-is-it-used

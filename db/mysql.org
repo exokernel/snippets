@@ -1,0 +1,7 @@
+#+title: Mysql
+
+* Check if schema exists
+
+#+begin_src sql
+    SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$db'
+#+end_src

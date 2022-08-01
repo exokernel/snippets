@@ -7,3 +7,12 @@
     (stuff arg1 arg2)
 
  #+end_src
+
+** Org mode
+SCHEDULED: <2022-07-31 Sun>
+
+ + Read org mode with M-x org-info
+
+ + org-toggle-heading: SPC m-h
+
+ + org-toggle-item: SPC m-i

@@ -16,3 +16,8 @@ SCHEDULED: <2022-07-31 Sun>
  + org-toggle-heading: SPC m-h
 
  + org-toggle-item: SPC m-i
+
+*** Insert Code Block
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-c s") 'org-insert-structured-template)
+#+end_src

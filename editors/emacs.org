@@ -21,3 +21,10 @@ SCHEDULED: <2022-07-31 Sun>
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-c s") 'org-insert-structured-template)
 #+end_src
+
+*** Toggle vterm
+#+begin_quote
+to open: SPC o t
+
+to close: M-SPC o t
+#+end_quote

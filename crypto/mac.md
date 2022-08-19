@@ -2,7 +2,7 @@
 
 ## HMAC
 
-https://en.wikipedia.org/wiki/HMAC
+<https://en.wikipedia.org/wiki/HMAC>
 
 In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.
 

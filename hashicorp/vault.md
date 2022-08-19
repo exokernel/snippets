@@ -101,7 +101,7 @@ vault token capabilities $ADMIN_TOKEN sys/auth/approle
 
 A policy to step down from active?
 
-```text
+```hcl
 path "sys/stepdown"
 {
    capabilities = ["create", "update", "sudo"]

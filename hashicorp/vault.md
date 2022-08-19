@@ -21,11 +21,11 @@ vault server -dev -dev-root-token-id=root
 
 ## Policies
 
-Tutorial: https://learn.hashicorp.com/tutorials/vault/policies
+Tutorial: <https://learn.hashicorp.com/tutorials/vault/policies>
 
 Example Policy: admin-policy.hcl
 
-```json
+```hcl
 # Read system health check
 path "sys/health"
 {

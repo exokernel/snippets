@@ -25,7 +25,7 @@ Tutorial: <https://learn.hashicorp.com/tutorials/vault/policies>
 
 Example Policy: admin-policy.hcl
 
-```hcl
+```text
 # Read system health check
 path "sys/health"
 {
@@ -101,7 +101,7 @@ vault token capabilities $ADMIN_TOKEN sys/auth/approle
 
 A policy to step down from active?
 
-```json
+```text
 path "sys/stepdown"
 {
    capabilities = ["create", "update", "sudo"]

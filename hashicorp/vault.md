@@ -25,7 +25,7 @@ Tutorial: <https://learn.hashicorp.com/tutorials/vault/policies>
 
 Example Policy: admin-policy.hcl
 
-```text
+```hcl
 # Read system health check
 path "sys/health"
 {

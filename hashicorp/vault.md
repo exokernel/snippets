@@ -107,3 +107,8 @@ path "sys/stepdown"
    capabilities = ["create", "update", "sudo"]
 }
 ```
+
+
+## Identities
+
+<https://www.vaultproject.io/docs/concepts/identity>

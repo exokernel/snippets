@@ -88,16 +88,19 @@ path "sys/mounts"
 ```
 
 Create a token with the policy
+
 ```bash
 ADMIN_TOKEN=$(vault token create -format=json -policy="admin" | jq -r ".auth.client_token")
 ```
 
 Get capabilities of token for a path
+
 ```bash
 vault token capabilities $ADMIN_TOKEN sys/auth/approle
 ```
 
 A policy to step down from active?
+
 ```json
 path "sys/stepdown"
 {

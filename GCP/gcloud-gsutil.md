@@ -26,6 +26,12 @@ gcloud config configurations list
 gcloud config configurations activate config-name
 ```
 
+### Get project
+
+```bash
+gcloud config get project
+```
+
 ### Set project
 
 ```bash

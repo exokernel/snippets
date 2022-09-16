@@ -1,0 +1,14 @@
+# Terraform Plan Template for Github
+
+
+<details><summary>Integ Platform</summary>
+<p>
+
+Command:
+```zsh
+```
+
+```terraform
+```
+</p>
+</details>

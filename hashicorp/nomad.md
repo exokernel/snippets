@@ -2,6 +2,8 @@
 
 ## Starting up a nomad server cluster
 
+start up first server
+
 ```bash
 nomad agent -server -data-dir <somedir> -bootstrap-expect=3
 ```

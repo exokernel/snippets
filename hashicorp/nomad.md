@@ -29,3 +29,9 @@ List raft peers
 ```bash
 nomad operator raft list-peers
 ```
+
+### Shutdown Nomad Servers and Cleanup Raft
+
+```bash
+kill $(pgrep nomad) && rm nomad-data/server/raft/raft.db && ps aux | grep nomad
+```

@@ -1,5 +1,11 @@
 # Elastic Search Stuff
 
+## Get elastic version
+
+```bash
+curl -s http://localhost:9200/
+```
+
 ## List Indices Example
 
 ```bash

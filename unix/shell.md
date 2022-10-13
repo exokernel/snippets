@@ -13,3 +13,12 @@ Join lines with comma
 ```bash
 cat some-file | paste -sd, -
 ```
+
+### Exit script immediately if any command fails
+
+
+see `help set` for details
+
+```bash
+set -e
+```

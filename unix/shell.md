@@ -19,7 +19,7 @@ cat some-file | paste -sd, -
 
 see `help set | less` for details
 
-```bash
+```txt
  -e  Exit immediately if a command exits with a non-zero status.
 ```
 

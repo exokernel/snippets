@@ -17,7 +17,11 @@ cat some-file | paste -sd, -
 ### Exit script immediately if any command fails
 
 
-see `help set` for details
+see `help set | less` for details
+
+```bash
+ -e  Exit immediately if a command exits with a non-zero status.
+```
 
 ```bash
 set -e

@@ -16,6 +16,18 @@
 
 ## Concepts
 
+### Locks
+
+* FLUSH TABLES WITH READ LOCK
+
+  <https://dev.mysql.com/doc/refman/8.0/en/flush.html#flush-tables-with-read-lock>
+
+  Closes all open tables and locks all tables for all databases with a global read lock.
+
+  This operation requires the FLUSH_TABLES or RELOAD privilege.
+
+  This operation is a very convenient way to get backups if you have a file system such as Veritas or ZFS that can take snapshots in time. Use UNLOCK TABLES to release the lock.
+
 ### Tablespaces
 
 What is a tablespace?
@@ -47,3 +59,13 @@ What is a tablespace?
 * Replication SQL applier thread.
 
   The replica creates an SQL (applier) thread to read the relay log that is written by the replication receiver thread and execute the transactions contained in it.
+
+### Isolation Level
+
+  <https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_isolation_level>
+
+  One of the foundations of database processing. Isolation is the I in the acronym ACID; the isolation level is the setting that fine-tunes the balance between performance and reliability, consistency, and reproducibility of results when multiple transactions are making changes and performing queries at the same time.
+
+  From highest amount of consistency and protection to the least, the isolation levels supported by InnoDB are: SERIALIZABLE, REPEATABLE READ, READ COMMITTED, and READ UNCOMMITTED.
+
+  With InnoDB tables, many users can keep the default isolation level (REPEATABLE READ) for all operations. Expert users might choose the READ COMMITTED level as they push the boundaries of scalability with OLTP processing, or during data warehousing operations where minor inconsistencies do not affect the aggregate results of large amounts of data. The levels on the edges (SERIALIZABLE and READ UNCOMMITTED) change the processing behavior to such an extent that they are rarely used.

@@ -5,14 +5,24 @@
 * Check if schema exists
 
 ```sql
-    SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$db'
+SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$db'
 ```
 
 * Check for user
 
 ```sql
-    SELECT USER FROM mysql.user WHERE USER = '$username';
+SELECT USER FROM mysql.user WHERE USER = '$username';
 ```
+
+* super_read_only
+
+```sql
+SET GLOBAL super_read_only = 1;
+```
+
+  read_only has a historical issue: users with the SUPER privilege can override the setting and could still run DML queries. Since Percona Server 5.6.21 and MySQL 5.7.8, however, you can use the super_read_only feature to extend the read_only  option and apply it to users with SUPER privileges.
+
+  <https://www.percona.com/blog/2016/09/27/using-the-super_read_only-system-variable/>
 
 ## Concepts
 

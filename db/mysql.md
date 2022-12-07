@@ -18,9 +18,19 @@
 
 ### Locks
 
+* FLUSH TABLES
+
+  <https://dev.mysql.com/doc/refman/8.0/en/flush.html#flush-tables>
+
+  Closes all open tables, forces all tables in use to be closed, and flushes the prepared statement cache.
+
+  This operation requires the FLUSH_TABLES or RELOAD privilege.
+
 * FLUSH TABLES WITH READ LOCK
 
   <https://dev.mysql.com/doc/refman/8.0/en/flush.html#flush-tables-with-read-lock>
+
+  <https://www.percona.com/blog/2012/03/23/how-flush-tables-with-read-lock-works-with-innodb-tables/>
 
   Closes all open tables and locks all tables for all databases with a global read lock.
 

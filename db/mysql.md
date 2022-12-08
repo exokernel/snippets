@@ -89,3 +89,22 @@ What is a tablespace?
   From highest amount of consistency and protection to the least, the isolation levels supported by InnoDB are: SERIALIZABLE, REPEATABLE READ, READ COMMITTED, and READ UNCOMMITTED.
 
   With InnoDB tables, many users can keep the default isolation level (REPEATABLE READ) for all operations. Expert users might choose the READ COMMITTED level as they push the boundaries of scalability with OLTP processing, or during data warehousing operations where minor inconsistencies do not affect the aggregate results of large amounts of data. The levels on the edges (SERIALIZABLE and READ UNCOMMITTED) change the processing behavior to such an extent that they are rarely used.
+
+
+## Misc
+
+### Transparent Huge Pages and MySQL
+
+On occasions, transparent huge pages are behind bloated memory usage in dedicated database servers, making the overall memory usage unstable. In cases where you are experiencing memory leak-like issues, you can consider disabling THP and checking if the memory usage stabilizes. Note that even if these changes can be made dynamically, they are not taken into account for processes that were already running with THP enabled. If your database service was started while THP were enabled, you will have to manually restart it after dynamically disabling THP. We will also show how to make these changes to be persistent across server-wide reboots.
+
+<https://percona.service-now.com/percona?id=kb_article&sys_id=d4e75f491b24f010ff8499b4bd4bcb6a>
+
+<https://www.percona.com/blog/2019/03/06/settling-the-myth-of-transparent-hugepages-for-databases/>
+
+<https://archive.fosdem.org/2019/schedule/event/hugepages_databases/>
+
+# Percona Tools
+
+```bash
+pt-mysql-summary | grep -A5 -i "memory management"
+```

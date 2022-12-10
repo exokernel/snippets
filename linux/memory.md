@@ -33,3 +33,12 @@ jemalloc is a general purpose malloc(3) implementation that emphasizes fragmenta
 
 Scalable memory allocation using jemalloc
 <https://www.facebook.com/notes/10158791475077200/>
+
+#### Check for jemalloc with percona tools
+
+```bash
+$ pt-mysql-summary | grep -A5 -i "memory management"
+# Memory management library ##################################
+jemalloc enabled in mysql config for process with id 14490
+Using jemalloc from /usr/lib64/libjemalloc.so.1
+```

@@ -8,6 +8,12 @@
 curl -s http://localhost:9200/
 ```
 
+### Get cluster health
+
+```bash
+curl -s https://localhost:9200/_cluster/health | jq .
+```
+
 ### List Indices Example
 
 ```bash

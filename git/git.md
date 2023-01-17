@@ -22,4 +22,4 @@ This will ensure that you can have
 
 * a global `$HOME/.gitignore` that works normally to exclude files in all your git repos that are in subdirectories of $HOME
 
-* your excluding everything in your $HOME dir except what you explicitly chose to track
+* you're excluding everything in your $HOME dir except what you explicitly chose to track

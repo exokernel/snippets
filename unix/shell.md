@@ -70,6 +70,14 @@ eval $(python3 $HOME/scripts/clean-path.py)
 
 ## Human readable $PATH
 
+Human readable
+
+```zsh
+echo $PATH | tr ':' '\n' | less
+```
+
+Checking for duplicates
+
 ```zsh
 echo $PATH | tr ':' '\n' | sort | uniq -c | less
 ```

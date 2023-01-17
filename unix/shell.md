@@ -59,11 +59,17 @@ clean = dict.fromkeys(path)
 clean_path = ':'.join(clean.keys())
 
 # dump to stdout
-print(f"PATH={clean_path}")
+print(f"PATH=\"{clean_path}\"")
 ```
 
 Then in your .zshrc (or equivalent)
 
 ```zsh
 eval $(python3 $HOME/scripts/clean-path.py)
+```
+
+## Human readable $PATH
+
+```zsh
+echo $PATH | tr ':' '\n' | sort | uniq -c | less
 ```

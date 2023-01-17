@@ -38,3 +38,32 @@ see `help set | less` for details
 ```bash
 set -e
 ```
+
+## Cleanup $PATH with python
+
+This actually does preserve the order. TODO: Look into why
+
+```python3
+import os
+
+# grab $PATH
+path = os.environ['PATH'].split(':')
+
+# normalize all paths
+path = map(os.path.normpath, path)
+
+# remove duplicates via a dictionary
+clean = dict.fromkeys(path)
+
+# combine back into one path
+clean_path = ':'.join(clean.keys())
+
+# dump to stdout
+print(f"PATH={clean_path}")
+```
+
+Then in your .zshrc (or equivalent)
+
+```zsh
+eval $(python3 $HOME/scripts/clean-path.py)
+```

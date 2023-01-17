@@ -5,7 +5,7 @@
 * In your .zshrc
 
     ```zsh
-    alias gith="git --work-tree=$HOME --git-dir='$HOME/.dotfiles.git'"
+    alias gith="git --work-tree=$HOME --git-dir='$HOME/.home.git'"
     ```
 
 * In your $GIT_DIR/info/exclude

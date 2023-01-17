@@ -41,7 +41,7 @@ set -e
 
 ## Cleanup $PATH with python
 
-This actually does preserve the order. TODO: Look into why
+This actually does preserve the order. TODO: Look into why. aparently `dict.fromkeys` preserves order.
 
 ```python3
 import os

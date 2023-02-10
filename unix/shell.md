@@ -81,3 +81,10 @@ Checking for duplicates
 ```zsh
 echo $PATH | tr ':' '\n' | sort | uniq -c | less
 ```
+
+## Awk tricks
+
+sum column
+```
+awk -F',' '{sum+=$57;} END{print sum;}' file.txt
+```

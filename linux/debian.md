@@ -1,4 +1,4 @@
-# Debian
+# Debian Stuff
 
 ## Apt
 
@@ -6,4 +6,10 @@
 
 ```bash
 apt-get install -o Dir::Etc::sourcelist="sources.list.d/specific.list" prometheus-graphite-exporter
+```
+
+## See contents of .deb
+
+```txt
+dpkg-deb -c foo.deb
 ```

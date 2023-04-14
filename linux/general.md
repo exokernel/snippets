@@ -29,3 +29,11 @@ journalctl notes here
 ```bash
 usermod -a -G groupname username
 ```
+
+### Running Commands as User who has `nologin`
+
+You can use sudo to launch a shell as that user and then run your commands
+
+```bash
+sudo -u www-data bash
+```

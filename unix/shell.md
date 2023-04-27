@@ -88,3 +88,11 @@ sum column
 ```
 awk -F',' '{sum+=$57;} END{print sum;}' file.txt
 ```
+
+## Strip color codes from file
+
+<https://stackoverflow.com/questions/17998978/removing-colors-from-output>
+
+```bash
+cat validate.out.txt | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g" > validate.nocolor.2.out.txt
+```

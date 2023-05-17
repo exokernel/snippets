@@ -37,3 +37,9 @@ You can use sudo to launch a shell as that user and then run your commands
 ```bash
 sudo -u www-data bash
 ```
+
+### Extract unique IPs from tcpdump
+
+```bash
+tcpdump -ni any port '(514 or 5140)' and dst host 10.128.2.48 | awk '{ ip = gensub(/([0-9]+.[0-9]+.[0-9]+.[0-9]+)(.*)/,"\\1","g",$3); if(!d[ip]) { print ip; d[ip]=1; fflush(stdout) } }'
+```

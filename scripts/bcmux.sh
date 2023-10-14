@@ -21,19 +21,19 @@ done
 
 split_list=()
 for ssh_ip in "${ssh_list[@]:1}"; do
-    split_list+=("split-pane" "ssh -t $ssh_ip" ";")
+    split_list+=("split-pane" "ssh $ssh_ip" ";")
 done
 
 if [ $sync == true ]; then
 
-tmux new-session -d -s bcmux "ssh -t ${ssh_list[0]}" ';' \
+tmux new-session -d -s bcmux "ssh ${ssh_list[0]}" ';' \
     "${split_list[@]}" \
     select-layout tiled ';' \
     set-option -w synchronize-panes
 
 else
 
-tmux new-session -d -s bcmux "ssh -t ${ssh_list[0]}" ';' \
+tmux new-session -d -s bcmux "ssh ${ssh_list[0]}" ';' \
     "${split_list[@]}" \
     select-layout tiled ';'
 fi

@@ -25,7 +25,7 @@ for ssh_ip in "${ssh_list[@]:1}"; do
     split_list+=("split-pane" "ssh $ssh_ip" ";")
     i=$(($i+1))
     # every nth split re-tile the panes
-    if [ $i -ne ${#ssh_list[@]} ] && [ $(( $i % 2 )) -eq 0 ]; then
+    if [ $i -ne ${#ssh_list[@]} ]; then
         split_list+=("select-layout" "tiled" ";")
     fi
 done

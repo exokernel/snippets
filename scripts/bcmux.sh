@@ -20,25 +20,18 @@ while getopts "s" option; do
 done
 
 split_list=()
-i=1
 for ssh_ip in "${ssh_list[@]:1}"; do
     split_list+=("split-pane" "ssh $ssh_ip" ";")
-    i=$(($i+1))
-    # every nth split re-tile the panes
-    if [ $i -ne ${#ssh_list[@]} ]; then
-        split_list+=("select-layout" "tiled" ";")
-    fi
+    split_list+=("select-layout" "tiled" ";")
 done
 
 if [ $sync == true ]; then
     tmux new-session -d -s bcmux "ssh ${ssh_list[0]}" ';' \
         "${split_list[@]}" \
-        select-layout tiled ';' \
         set-option -w synchronize-panes
 else
     tmux new-session -d -s bcmux "ssh ${ssh_list[0]}" ';' \
-        "${split_list[@]}" \
-        select-layout tiled ';'
+        "${split_list[@]}"
 fi
 
 echo "created tmux session named bcmux; run 'tmux at -t bcmux' to attach"
